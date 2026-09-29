@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --brand-charcoal: #151411;
+  --brand-ink: #211f1a;
+  --brand-ink-soft: #716d64;
+  --brand-paper: #f6f2e9;
+  --brand-white: #ffffff;
+  --brand-gold: #d1ad59;
+}
+
+@theme inline {
+  --font-serif: var(--font-display), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
+  --color-charcoal: #151411;
+  --color-ink: #211f1a;
+  --color-ink-soft: #716d64;
+  --color-paper: #f6f2e9;
+  --color-gold-50: #faf7ee;
+  --color-gold-100: #f4ecd8;
+  --color-gold-200: #e9d9b1;
+  --color-gold-300: #ddc47f;
+  --color-gold-400: #d1ad59;
+  --color-gold-500: #bd963e;
+  --color-gold-600: #a78032;
+  --color-gold-700: #896828;
+  --color-gold-800: #6d5222;
+  --color-gold-900: #4d3c1c;
+  --color-gold-950: #302613;
+  --color-brand-50: #faf7ee;
+  --color-brand-100: #f4ecd8;
+  --color-brand-200: #e9d9b1;
+  --color-brand-300: #ddc47f;
+  --color-brand-400: #d1ad59;
+  --color-brand-500: #bd963e;
+  --color-brand-600: #a78032;
+  --color-brand-700: #896828;
+  --color-brand-800: #6d5222;
+  --color-brand-900: #4d3c1c;
+  --color-brand-950: #302613;
+  --shadow-card: 0 18px 48px rgba(31, 26, 15, 0.11);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background: var(--brand-paper);
+  color: var(--brand-ink);
+  font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+::selection {
+  background: #896828;
+  color: #fff;
+}
+
+.hero-texture {
+  background-image:
+    radial-gradient(circle at 78% 18%, rgba(209, 173, 89, 0.1), transparent 34rem),
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: auto, 48px 48px, 48px 48px;
+}
+
+.eyebrow,
+.eyebrow-light {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.67rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  color: #795a1d;
+}
+
+.eyebrow-light {
+  color: #e4c87e;
+}
+
+.eyebrow::before,
+.eyebrow-light::before {
+  width: 1.75rem;
+  height: 1px;
+  flex: none;
+  background: currentColor;
+  content: "";
+}
+
+.nav-link {
+  position: relative;
+  padding-block: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: #d1ad59;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.nav-link:hover {
+  color: #e4c87e;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.footer-link {
+  transition: color 180ms ease;
+}
+
+.footer-link:hover {
+  color: #e4c87e;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee8d9;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid #eee8d9;
+  border-radius: 999px;
+  background: #b7a477;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #896828;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
