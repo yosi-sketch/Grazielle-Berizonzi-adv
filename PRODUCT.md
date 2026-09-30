@@ -1,32 +1,32 @@
-# Gabriela Santana — Advocacia Previdenciária
+# Grazielle Berizonzi Advocacia
 
 ## Plataforma
 
-Site institucional responsivo em Next.js, com navegação por seções, detalhes das áreas de atuação em modal e contato por WhatsApp, telefone, Instagram e mapa.
+Site institucional responsivo em Next.js, com navegação por seções, detalhes das áreas de atuação em modal, avaliações públicas do Google e contato por WhatsApp, telefone, Instagram e mapa.
 
 ## Público
 
-Pessoas que procuram orientação em Direito Previdenciário, com atenção especial às professoras e à aposentadoria da carreira docente.
+Pessoas e empresas que procuram orientação jurídica em Muriaé e região.
 
 ## Objetivo
 
-Apresentar a atuação de Gabriela Santana, explicar os temas atendidos e facilitar o contato e a localização do escritório em Itajubá, Minas Gerais.
+Apresentar a atuação de Grazielle Berizonzi, explicar as áreas atendidas e facilitar o contato e a localização do escritório em Muriaé, Minas Gerais.
 
 ## Identidade
 
-- Nome profissional: Gabriela Santana — Advogada.
-- Paleta extraída da marca: carvão, dourado e marfim.
+- Nome profissional: Grazielle Berizonzi Advocacia.
+- Paleta: preto e branco do logo transparente, com neutros marfim e acentos taupe quentes.
 - Tipografia: Cormorant Garamond nos títulos e Plus Jakarta Sans nos textos.
 - Tom: sóbrio, acolhedor, informativo e claro.
 
 ## Conteúdo e mídia
 
-- Retrato da advogada preparado a partir da imagem fornecida.
-- Atuação: aposentadorias, aposentadoria da professora, planejamento previdenciário, contagem de tempo, benefícios à pessoa com deficiência, pensão por morte, auxílio-reclusão e encaminhamentos administrativos e judiciais.
-- Endereço: R. Prof. Cornélio de Faria, nº 57, São Vicente, Itajubá - MG, 37502-008.
-- WhatsApp e telefone: (35) 98411-6024.
-- Instagram: @advogadagabrielasantana.
-- O site oferece acesso ao mapa do endereço informado; avaliações e resultados individuais não são reproduzidos.
+- Retratos e logo locais fornecidos para a identidade de Grazielle Berizonzi.
+- Atuação apresentada: Direito de Família, Civil e Contratos, Consumidor, Penal, Trabalho e Correspondência Jurídica.
+- Endereço: R. Ítalo Aló de Melo, 337, sala 101, Centro, Muriaé - MG, 36880-121.
+- WhatsApp e telefone: (32) 98869-2707.
+- Instagram: @grazielleberizonzi.
+- O site exibe trechos de três avaliações públicas do Google, com atribuição abreviada e link para o perfil original. A nota e a quantidade mostradas foram conferidas no perfil em 30/09/2026.
 
 ## Restrições técnicas
 

@@ -17,23 +17,25 @@ const bodyFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Gabriela Santana | Advocacia Previdenciária em Itajubá",
+  title: "Grazielle Berizonzi Advocacia | Muriaé, MG",
   description:
-    "Advocacia previdenciária em Itajubá, MG, com atenção especial à aposentadoria das professoras, planejamento previdenciário e benefícios.",
+    "Grazielle Berizonzi Advocacia em Muriaé, MG. Orientação jurídica individualizada em Direito de Família, Civil, Consumidor, Penal, Trabalho e correspondência jurídica.",
   keywords: [
-    "Gabriela Santana",
-    "advocacia previdenciária em Itajubá",
-    "advogada previdenciária",
-    "aposentadoria de professora",
-    "planejamento previdenciário",
-    "pensão por morte",
-    "benefícios previdenciários",
-    "advogada em Itajubá",
+    "Grazielle Berizonzi Advocacia",
+    "Grazielle Gonçalves Berizonzi",
+    "advogada em Muriaé",
+    "advocacia em Muriaé MG",
+    "direito de família",
+    "direito civil e contratos",
+    "direito do consumidor",
+    "direito penal",
+    "direito do trabalho",
+    "correspondência jurídica em Muriaé",
   ],
   openGraph: {
-    title: "Gabriela Santana | Advocacia Previdenciária",
+    title: "Grazielle Berizonzi Advocacia | Muriaé, MG",
     description:
-      "Orientação previdenciária em Itajubá, com atenção à trajetória de trabalho de cada pessoa.",
+      "Atuação jurídica individualizada em Muriaé e região, com orientação clara e acompanhamento próximo.",
     locale: "pt_BR",
     type: "website",
   },
@@ -51,7 +53,7 @@ export default function RootLayout({
         bodyFont.variable + " " + displayFont.variable + " scroll-smooth"
       }
     >
-      <body className="min-h-screen overflow-x-clip bg-paper font-sans text-ink antialiased selection:bg-gold-700 selection:text-white">
+      <body className="min-h-screen overflow-x-clip bg-paper font-sans text-ink antialiased selection:bg-accent-700 selection:text-white">
         {children}
       </body>
     </html>
