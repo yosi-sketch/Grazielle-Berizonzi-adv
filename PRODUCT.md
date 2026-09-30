@@ -26,7 +26,7 @@ Apresentar a atuação de Grazielle Berizonzi, explicar as áreas atendidas e fa
 - Endereço: R. Ítalo Aló de Melo, 337, sala 101, Centro, Muriaé - MG, 36880-121.
 - WhatsApp e telefone: (32) 98869-2707.
 - Instagram: @grazielleberizonzi.
-- O site exibe trechos de três avaliações públicas do Google, com atribuição abreviada e link para o perfil original. A nota e a quantidade mostradas foram conferidas no perfil em 30/09/2026.
+- O site exibe trechos de 20 avaliações públicas do Google, com atribuição pelo primeiro nome e link para o perfil original. A nota e a quantidade mostradas foram conferidas no perfil em 30/09/2026.
 
 ## Restrições técnicas
 

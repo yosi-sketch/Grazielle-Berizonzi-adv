@@ -123,6 +123,14 @@ body {
   color: #d2bfa9;
 }
 
+.review-disclosure-icon {
+  transition: transform 180ms ease;
+}
+
+.review-disclosure[open] .review-disclosure-icon {
+  transform: rotate(45deg);
+}
+
 ::-webkit-scrollbar {
   width: 9px;
 }

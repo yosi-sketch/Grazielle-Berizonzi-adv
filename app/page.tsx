@@ -124,6 +124,98 @@ const practiceAreas: PracticeArea[] = [
   },
 ];
 
+const publicReviews = [
+  {
+    author: "Nathalia",
+    quote:
+      "Desde o início do meu caso, você demonstrou profissionalismo, competência, dedicação e um compromisso admirável.",
+  },
+  {
+    author: "Layse",
+    quote:
+      "Excelente profissional, muito competente, atenciosa e dedicada. Sempre prestou um atendimento claro, ágil e com muito comprometimento.",
+  },
+  {
+    author: "Mila",
+    quote:
+      "A Graziele é uma profissional muito competente e de extrema confiança! Confio totalmente no seu trabalho.",
+  },
+  {
+    author: "Raul",
+    quote:
+      "Excelente profissional e ótima pessoa! Paciente, educada, compra a briga do cliente como se fosse sua!!",
+  },
+  {
+    author: "Adriana",
+    quote: "Graziela é uma advogada competente, ética e confiável. Recomendo!",
+  },
+  {
+    author: "Maria Vitória",
+    quote:
+      "Excelente advogada! Sempre mostrando uma ética profissional impecável e um compromisso inabalável com seus clientes.",
+  },
+  {
+    author: "Carol",
+    quote: "Muito prestativa, muito humana, uma profissional exemplar.",
+  },
+  {
+    author: "Natália",
+    quote: "Extremamente competente e humana..",
+  },
+  {
+    author: "Kamila",
+    quote: "Excelente advogada, exerce a profissão com maestria e muita dedicação !",
+  },
+  {
+    author: "Juju",
+    quote: "Sempre que preciso, solicito o serviço dela.",
+  },
+  {
+    author: "Ana Elisa",
+    quote:
+      "Uma profissional super competente, atenciosa e sempre a disposição para tirar dúvidas. Excelente!",
+  },
+  {
+    author: "Rayssa",
+    quote:
+      "Minha experiência com a Dra. Grazielle foi a melhor possível, ela é uma advogada de extrema competência.",
+  },
+  {
+    author: "Felipe",
+    quote: "Atendimento excepcional.",
+  },
+  {
+    author: "Juliana",
+    quote: "Super prestativa e atenciosa. Muito obrigada!",
+  },
+  {
+    author: "Clara",
+    quote: "Excelente advogada, comprometida, competente e muito atenciosa.",
+  },
+  {
+    author: "Daiane",
+    quote:
+      "Uma ótima advogada ,focada em tudo que faz , entra no caso com determinação...",
+  },
+  {
+    author: "Maria Clara",
+    quote: "Advogada competente e comprometida, oferece um serviço excepcional!!",
+  },
+  {
+    author: "Thaina",
+    quote:
+      "Profissional muito competente, atenciosa, objetiva e extremamente comprometida.",
+  },
+  {
+    author: "Milla",
+    quote: "Competência e dedicação são as suas virtudes!",
+  },
+  {
+    author: "Claudia",
+    quote: "Advogada maravilhosa! Excelente profissional",
+  },
+];
+
 const reveal: Variants = {
   hidden: { opacity: 0, y: 22 },
   visible: {
@@ -663,7 +755,7 @@ export default function Home() {
             <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
               <SectionHeading
                 eyebrow="AVALIAÇÕES PÚBLICAS"
-                description="Comentários publicados no perfil do Google. Acesse a ficha para ler cada avaliação completa e conferir as mais recentes."
+                description="Trechos de 20 avaliações públicas do Google, com nomes abreviados. Leia os comentários completos no perfil original."
               >
                 O que dizem sobre o{" "}
                 <span className="italic text-accent-700">atendimento.</span>
@@ -711,49 +803,81 @@ export default function Home() {
               </div>
 
               <div className="grid gap-4 md:grid-cols-2">
-                <article className="border border-ink/10 bg-white p-7 sm:p-8 md:col-span-2">
-                  <div className="flex gap-1 text-accent-700" role="img" aria-label="5 de 5 estrelas">
-                    {Array.from({ length: 5 }, (_, index) => (
-                      <Star key={index} size={13} fill="currentColor" strokeWidth={1.5} />
+                {publicReviews.slice(0, 3).map((review, index) => (
+                  <article
+                    key={review.author}
+                    className={`border border-ink/10 bg-white p-7 sm:p-8 ${
+                      index === 0 ? "md:col-span-2" : ""
+                    }`}
+                  >
+                    <div
+                      className="flex gap-1 text-accent-700"
+                      role="img"
+                      aria-label="5 de 5 estrelas"
+                    >
+                      {Array.from({ length: 5 }, (_, starIndex) => (
+                        <Star
+                          key={starIndex}
+                          size={13}
+                          fill="currentColor"
+                          strokeWidth={1.5}
+                        />
+                      ))}
+                    </div>
+                    <blockquote
+                      className={`mt-5 font-serif leading-snug text-ink ${
+                        index === 0
+                          ? "max-w-3xl text-[1.55rem] sm:text-[1.8rem]"
+                          : "text-xl"
+                      }`}
+                    >
+                      “{review.quote}”
+                    </blockquote>
+                    <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.15em] text-ink-soft">
+                      {review.author} · Avaliação pública no Google
+                    </p>
+                  </article>
+                ))}
+                <details className="review-disclosure border-t border-ink/15 md:col-span-2">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-[10px] font-semibold uppercase tracking-[0.14em] text-ink transition-colors hover:text-accent-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-700">
+                    <span>Ler outras {publicReviews.length - 3} avaliações</span>
+                    <span
+                      aria-hidden="true"
+                      className="review-disclosure-icon font-serif text-2xl text-accent-800"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <div className="grid gap-3 pb-4 sm:grid-cols-2 xl:grid-cols-3">
+                    {publicReviews.slice(3).map((review) => (
+                      <article
+                        key={review.author}
+                        className="border border-ink/10 bg-white p-6"
+                      >
+                        <div
+                          className="flex gap-1 text-accent-700"
+                          role="img"
+                          aria-label="5 de 5 estrelas"
+                        >
+                          {Array.from({ length: 5 }, (_, index) => (
+                            <Star
+                              key={index}
+                              size={12}
+                              fill="currentColor"
+                              strokeWidth={1.5}
+                            />
+                          ))}
+                        </div>
+                        <blockquote className="mt-4 font-serif text-lg leading-snug text-ink">
+                          “{review.quote}”
+                        </blockquote>
+                        <p className="mt-5 text-[9px] font-semibold uppercase tracking-[0.13em] text-ink-soft">
+                          {review.author} · Google
+                        </p>
+                      </article>
                     ))}
                   </div>
-                  <blockquote className="mt-5 max-w-3xl font-serif text-[1.55rem] leading-snug text-ink sm:text-[1.8rem]">
-                    “Desde o início do meu caso, você demonstrou profissionalismo,
-                    competência, dedicação e um compromisso admirável.”
-                  </blockquote>
-                  <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.15em] text-ink-soft">
-                    Nathalia · Avaliação pública no Google
-                  </p>
-                </article>
-                <article className="border border-ink/10 bg-white p-7 sm:p-8">
-                  <div className="flex gap-1 text-accent-700" role="img" aria-label="5 de 5 estrelas">
-                    {Array.from({ length: 5 }, (_, index) => (
-                      <Star key={index} size={13} fill="currentColor" strokeWidth={1.5} />
-                    ))}
-                  </div>
-                  <blockquote className="mt-5 font-serif text-xl leading-snug text-ink">
-                    “Excelente profissional, muito competente, atenciosa e
-                    dedicada. Sempre prestou um atendimento claro, ágil e com
-                    muito comprometimento.”
-                  </blockquote>
-                  <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.15em] text-ink-soft">
-                    Layse · Avaliação pública no Google
-                  </p>
-                </article>
-                <article className="border border-ink/10 bg-white p-7 sm:p-8">
-                  <div className="flex gap-1 text-accent-700" role="img" aria-label="5 de 5 estrelas">
-                    {Array.from({ length: 5 }, (_, index) => (
-                      <Star key={index} size={13} fill="currentColor" strokeWidth={1.5} />
-                    ))}
-                  </div>
-                  <blockquote className="mt-5 font-serif text-xl leading-snug text-ink">
-                    “A Graziele é uma profissional muito competente e de extrema
-                    confiança! Confio totalmente no seu trabalho.”
-                  </blockquote>
-                  <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.15em] text-ink-soft">
-                    Mila · Avaliação pública no Google
-                  </p>
-                </article>
+                </details>
               </div>
             </div>
           </div>
